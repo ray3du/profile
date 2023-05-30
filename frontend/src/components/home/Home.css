@@ -1,0 +1,116 @@
+#home{
+    padding: 0;
+    position: relative;
+    overflow-x: hidden;
+    max-width: 100%;
+    min-height: 100vh;
+}
+
+#inner-home{
+    margin: 80px 68px 0 68px;
+    font-weight: bold;
+}
+
+#description{
+    font-size: 52px;
+    line-height: 72.8px;
+    letter-spacing: -0.52px;
+    margin-top: 80px;
+    text-align: left;
+    margin-right: 80px;
+}
+
+@media screen and (max-width: 768px) {
+    #description{
+        margin-right: 0;
+        text-align: center;
+        font-size: 40px;
+        line-height: 56px;
+        letter-spacing: -0.4px;
+        margin-top: 60px;
+    }
+    #home{
+        background: linear-gradient(180deg, var(--primary) 75%, var(--secondary) 25%)
+    }
+}
+
+
+#work_view{
+    position: absolute;
+    bottom: 45px;
+}
+
+#about-page{
+    background-color: var(--primary);
+}
+
+#outer_circle {
+    width: 195px;
+    height: 195px;
+    border: 1px dashed var(--secondary);
+    background-color: var(--primary);
+    border-radius: 100%;
+    text-align: center;
+    animation: outer_animate 2s linear infinite;
+}
+
+@keyframes outer_animate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+#outer_circle:hover{
+    cursor: pointer;
+}
+
+#inner_circle:hover{
+    border: 1px solid #fff;
+    animation: zoom-in-zoom-out 2s ease;
+}
+
+@keyframes zoom-in-zoom-out {
+    0% {
+      transform: scale(1, 1);
+    }
+    50% {
+      transform: scale(0.8, 0.8);
+    }
+    100% {
+      transform: scale(1, 1);
+    }
+  }
+
+#inner_circle {
+    width: 120px;
+    height: 120px;
+    border: 1px solid var(--secondary);
+    background-color: var(--primary);
+    border-radius: 100%;
+    z-index: 1;
+}
+
+#inner_circle a{
+    font-size: 10px;
+    letter-spacing: 4px;
+    line-height: 20px;
+}
+
+#inner_circle a:hover{
+    color: var(--white);
+}
+
+
+#profile{
+    background-size: contain;
+    background-clip: border-box;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: transparent;
+    width:max-content;
+}
+
+
